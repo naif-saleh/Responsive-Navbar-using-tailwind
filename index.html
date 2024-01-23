@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./tailwinde/tailwinde.js"></script>
+    <title>index</title>
+</head>
+<body class="bg-cyan-500">
+   <nav class="p-5 bg-gray-100 shadow md:flex md:items-center md:justify-between">
+    <div class="flex items-center justify-between">
+        <span class="font-4xl font-['poppins']">
+        <img src="./images/png-transparent-tailwind-css-hd-logo.png" class="h-10 inline" alt="">
+            tailwind
+        </span>
+       
+      <span class="block md:hidden"><img class="h-10 cursor-pointer" src="./images/hamburger-button-computer-icons-menu-bar-line.jpg" onclick="menue(this)" alt=""></span>
+    </div>
+    <ul class="md:opacity-100 opacity-0 pl-4 md:pl-0 md:flex md:items-center absolute md:static
+     bg-gray-100 w-full md:w-auto left-0 py-10 md:py-0 top-[-400] transition-all duration-500 ease-in">
+        <li class="mx-4 py-4 md:py-0"><a href=""  class="font-1xl hover:text-white md:hover:text-cyan-500 duration-500">Home</a></li>
+        <li class="mx-4 py-4 md:py-0"><a href=""  class="font-1xl hover:text-white md:hover:text-cyan-500 duration-500">About</a></li>
+        <li class="mx-4 py-4 md:py-0"><a href=""  class="font-1xl hover:text-white md:hover:text-cyan-500 duration-500">Blog</a></li>
+        <li class="mx-4 py-4 md:py-0"><a href=""  class="font-1xl hover:text-white md:hover:text-cyan-500 duration-500">Contact</a></li>
+        <button class="ml-4 md:ml-0 font-1xl py-2 px-6 bg-cyan-500 text-white font-bold rounded hover:bg-gray-100 hover:text-cyan-500 duration-500 hover:border hover:border-cyan-500 border border-trancparent">Get Started</button>
+    </ul>
+   </nav>
+
+   <script>
+
+    let isChanged = false;
+    let list = document.querySelector('ul');
+
+   function menue(event){
+        if(isChanged == false){
+            event.src="./images/hamburger-button-computer-icons-menu-bar-line.jpg";
+            list.classList.remove('top-[80px]');
+            list.classList.remove('opacity-100');
+            isChanged = true;
+        }
+        else{
+            event.src = "./images/Untitled.png";
+            list.classList.add('top-[80px]');
+            list.classList.add('opacity-100');
+            isChanged = false;
+        }
+    }
+   </script>
+
+
+</body>
+</html>
